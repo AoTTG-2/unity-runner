@@ -1,5 +1,5 @@
 FROM mcr.microsoft.com/dotnet/sdk:3.1
-COPY / /opt/Unity/Editor/Data/NetCore/Sdk-3.1
+COPY / /opt/Unity/Editor/Data/NetCore/Sdk-3.1/
 RUN ls -la /*
 
 # install sonar scanner
