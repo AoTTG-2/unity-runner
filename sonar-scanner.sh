@@ -1,5 +1,9 @@
 #!/bin/sh -l
 
+
+  # install sonar scanner
+sh -c /opt/Unity/Editor/Data/NetCore/Sdk-2.2.107/dotnet tool install dotnet-sonarscanner --tool-path . --version 5.0.4
+
 set -eu
 
 begin_cmd="/dotnet-sonarscanner begin"
