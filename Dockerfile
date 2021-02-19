@@ -3,7 +3,7 @@ COPY / /opt/Unity/Editor/Data/NetCore/Sdk-3.1/
 RUN ls -la /*
 
 # install sonar scanner
-RUN /opt/Unity/Editor/Data/NetCore/Sdk-3.1/dotnet tool install dotnet-sonarscanner --tool-path . --version 5.0.4
+RUN dotnet tool install dotnet-sonarscanner --tool-path . --version 5.0.4
 
 COPY sonar-scanner.sh  /
 
