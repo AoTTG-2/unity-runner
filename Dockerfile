@@ -3,11 +3,13 @@ COPY / /usr/share/dotnet/
 RUN ls -la /*
 
 # base image
-FROM ubuntu: 16.04# install packages
+FROM ubuntu: 16.04
 RUN apt-get update && \
     apt-get install -y curl \
     wget \
-    openjdk-8-jdkENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+    openjdk-8-jdk 
+    
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
 # install sonar scanner
 RUN dotnet tool install dotnet-sonarscanner --tool-path . --version 5.0.4
