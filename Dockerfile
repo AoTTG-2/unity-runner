@@ -2,8 +2,6 @@ FROM mcr.microsoft.com/dotnet/sdk:3.1
 COPY / /usr/share/dotnet/
 RUN ls -la /*
 
-# base image
-FROM ubuntu: 16.04
 RUN apt-get update && apt-get install -y curl wget openjdk-8-jdk 
     
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
