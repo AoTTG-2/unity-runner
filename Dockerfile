@@ -5,13 +5,9 @@ RUN apt-get update && \
     apt-get install -y openjdk-11-jre-headless && \
     apt-get clean;
 
-RUN ls -la usr/lib/*
-
 # Setup JAVA_HOME -- useful for docker commandline
-ENV JAVA_HOME /usr/lib/jvm/openjdk-11-jre-headless-amd64/
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/
 RUN export JAVA_HOME
-
-
 
 #ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
