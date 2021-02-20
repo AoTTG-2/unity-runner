@@ -11,7 +11,7 @@ RUN apt-get update && \
 ENV JAVA_HOME /usr/lib/jvm/openjdk-11-jre-headless-amd64/
 RUN export JAVA_HOME
 
-ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+#ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
 # install sonar scanner
 RUN dotnet tool install dotnet-sonarscanner --tool-path . --version 5.0.4
