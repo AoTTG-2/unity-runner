@@ -3,7 +3,7 @@ COPY / /usr/share/dotnet/
 RUN ls -la /*
 
 # install sonar scanner
-RUN dotnet tool install dotnet-sonarscanner --tool-path . --version 4.7.1
+RUN dotnet tool install dotnet-sonarscanner --tool-path . --version 5.0.4
 
 COPY sonar-scanner.sh  /
 
